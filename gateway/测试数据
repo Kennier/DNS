@@ -1,0 +1,25 @@
+至强 4核
+并发1000，时长600秒 域名1 开启缓存
+[root@localhost leigod-speed]# dnsperf -c 1000 -l 600 -d testfile -s 10.178.100.20
+DNS Performance Testing Tool
+Version 2.3.2
+
+[Status] Command line: dnsperf -c 1000 -l 600 -d testfile -s 10.178.100.20
+[Status] Sending queries (to 10.178.100.20)
+[Status] Started at: Wed Mar 10 15:25:38 2021
+[Status] Stopping after 600.000000 seconds
+[Status] Testing complete (time limit)
+
+Statistics:
+
+  Queries sent:         39424635
+  Queries completed:    39424635 (100.00%)
+  Queries lost:         0 (0.00%)
+
+  Response codes:       NOERROR 39424635 (100.00%)
+  Average packet size:  request 31, response 90
+  Run time (s):         600.001836
+  Queries per second:   65707.523935
+
+  Average Latency (s):  0.001420 (min 0.000154, max 0.351866)
+  Latency StdDev (s):   0.002564

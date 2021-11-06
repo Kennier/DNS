@@ -1,0 +1,149 @@
+{
+  "groups": [
+    {
+      "name": "nn.dns",
+      "type": "com.nn.dns.gateway.config.DnsProperties",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties"
+    },
+    {
+      "name": "nn.whitelist",
+      "type": "com.nn.dns.gateway.config.WhiteListConfig",
+      "sourceType": "com.nn.dns.gateway.config.WhiteListConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "nn.dns.async-refresh-time",
+      "type": "java.lang.Integer",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 10
+    },
+    {
+      "name": "nn.dns.cache-expire",
+      "type": "java.lang.Integer",
+      "description": "Cache expire time in seconds. Use ttl of respective DNS answer as default.",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "nn.dns.enable-redis-cache",
+      "type": "java.lang.Boolean",
+      "description": "Whether enable redis cache for external dns records.",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "nn.dns.enable-safe-box",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "nn.dns.fake-dns-server",
+      "type": "java.lang.String",
+      "description": "fake dns server.Used to detect dns poison.",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties"
+    },
+    {
+      "name": "nn.dns.file-path",
+      "type": "java.lang.String",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": "\/usr\/local\/nn\/dns\/"
+    },
+    {
+      "name": "nn.dns.mx-priory",
+      "type": "java.lang.Integer",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 10
+    },
+    {
+      "name": "nn.dns.network-card",
+      "type": "java.lang.String",
+      "description": "networkCard 网卡",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties"
+    },
+    {
+      "name": "nn.dns.server-port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 53
+    },
+    {
+      "name": "nn.dns.servers",
+      "type": "java.util.List<java.lang.String>",
+      "description": "External dns. You can add more reliable dns.",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties"
+    },
+    {
+      "name": "nn.dns.slave-servers",
+      "type": "java.util.List<java.lang.String>",
+      "description": "if is not in whitelist then use slave dns servers",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties"
+    },
+    {
+      "name": "nn.dns.thread-num",
+      "type": "java.lang.Integer",
+      "description": "Num of threads for process request. One thread is enough for local usage. Set it to 10 if you use it as a server for many users.",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "nn.dns.timeout",
+      "type": "java.lang.Long",
+      "description": "Timeout of external dns in millisecond.",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 2000
+    },
+    {
+      "name": "nn.dns.ttl",
+      "type": "java.lang.Long",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 2000
+    },
+    {
+      "name": "nn.dns.use-cache",
+      "type": "java.lang.Boolean",
+      "description": "Whether use ehcache for external dns records.When it is changed, the program must be restarted to take effort.",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "nn.dns.use-slave-server",
+      "type": "java.lang.Boolean",
+      "description": "不在白名单时是否启用备用DNS服务器",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": true
+    },
+    {
+      "name": "nn.dns.version-num",
+      "type": "java.lang.Integer",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "nn.dns.zones",
+      "type": "java.util.List<java.lang.String>",
+      "description": "自定义域名支持，类型hosts ex. <\/br> 127.0.0.1 localhost",
+      "sourceType": "com.nn.dns.gateway.config.DnsProperties"
+    },
+    {
+      "name": "nn.whitelist.domains",
+      "type": "java.util.Set<java.lang.String>",
+      "description": "域名白名单",
+      "sourceType": "com.nn.dns.gateway.config.WhiteListConfig"
+    },
+    {
+      "name": "nn.whitelist.key",
+      "type": "java.lang.String",
+      "description": "token.",
+      "sourceType": "com.nn.dns.gateway.config.WhiteListConfig"
+    },
+    {
+      "name": "nn.whitelist.url",
+      "type": "java.lang.String",
+      "description": "get whitelist url",
+      "sourceType": "com.nn.dns.gateway.config.WhiteListConfig"
+    }
+  ],
+  "hints": []
+}

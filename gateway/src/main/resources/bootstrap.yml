@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: nn-dns-gateway
+  profiles:
+    active: dev
+#region: zh

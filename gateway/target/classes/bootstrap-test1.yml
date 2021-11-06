@@ -1,0 +1,59 @@
+spring:
+  cloud:
+    nacos:
+      config:
+        enabled: true
+        server-addr: 172.31.4.12:8848
+        file-extension: yaml
+        namespace: 6
+      discovery:
+        server-addr: 172.31.4.12:8848
+        metadata:
+          en: test1
+  redis:
+    timeout: 3000
+    block-when-exhausted: true
+    host: 172.31.4.6
+    port: 7000
+    password: LbCn_jMT8NGp8x2NyL9
+    jedis:
+      pool:
+        max-active: 30    # 连接池最大连接数（使用负值表示没有限制）
+        max-idle: 10      # 连接池中的最大空闲连接
+        min-idle: 5       # 连接池中的最小空闲连接
+        max-wait: -1      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+
+nn:
+  dns:
+    server-port: 53
+    version-num: 1
+    servers:
+#      - USA  白名单
+      - 1.1.1.1
+      - 8.8.8.8
+      - 12.17.136.131
+      - 114.114.114.114
+    timeout: 3000
+    ttl: 1
+    use-cache: true
+    enable-redis-cache: true
+    cache-expire: 86400
+    #缓存需异步探测刷新时长
+    async-refresh-time: 10
+    network-card: jp1
+    fake-dns-server: 144.223.234.234
+    enable-safe-box: true
+    thread-num: 16
+    zones:
+      - 127.0.0.1 example.nnPC.com test.wkkkk.com
+    file-path: /usr/local/nn-dns-gateway/
+    slave-servers:
+#      - 10.178.69.57:45678
+#      - 22.36.6.60
+      - 223.5.5.5
+      - 114.114.114.114
+  whitelist:
+    url: https://opapi.nn.com/white/list
+    key: NNKLIUERHHdsUpkl
+  sensor:
+    url: https://test1-opapi.nn.com/sensor/common/report
